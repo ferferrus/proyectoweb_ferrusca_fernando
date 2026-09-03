@@ -1,0 +1,364 @@
+/* Reset y Fuentes */
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Arial', sans-serif;
+}
+
+.header {
+    background: #d9a06a;
+    color: #e6ce5a;
+    padding: 1rem;
+    position: fixed;
+    width: 100%;
+    z-index: 1000;
+}
+
+.header-inner {
+   display: flex;
+   align-items: center;
+  width: 100%;
+}
+
+
+/* Estilos para el contenedor del logo y el título */
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+  
+.logo img {
+  border-radius: 100px;
+  width: 150px;
+  height: 90px;
+}
+  
+.header h1 {
+  margin: 0;
+}
+  
+  /* BOTONES DE INICIO Y BARRA DE NAVEGACIÓN */
+  .mainnav{
+    margin-left: auto;
+  }
+  .main-nav ul {
+    display: flex;
+    list-style: none;
+}
+  
+.main-nav ul li a {
+  display: flex;
+  color: rgb(236, 224, 94);
+  list-style: none; /* Quita los puntos (viñetas) de la lista. */
+  gap: 15px; /*Espacio entre las secciones del menú nav */
+}
+  
+.btn-dona {
+    background-color: #d8713d;
+    color: #333333;
+  padding: 10px 20px;
+  margin-left: 15px;
+  border-radius: 10px;
+  border: 3px solid white;
+  text-decoration: none;
+  font-weight: bold;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+.nav-button:hover {
+    background-color: #7F966F;
+  transform: scale(1.05);
+  }
+
+.btn {
+  display: inline-block;
+  border: none;
+  border-radius: 8px;
+  padding: 0.75rem 1.5rem;
+  font-weight: 600;
+  cursor: pointer;
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+.btn.primary {
+  background: linear-gradient(45deg, var(--orange), var(--orange-light));
+  color: #fff;
+}
+
+.btn.primary:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 16px rgba(255, 107, 60, 0.3);
+}
+
+.btn.outline {
+  background: transparent;
+  border: 2px solid #fff;
+  color: #fff;
+}
+
+.btn.outline:hover {
+  background: rgba(175, 173, 173, 0.967);
+  transform: translateY(-2px);
+}
+
+/* Stats */
+.stats-grid {
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin-top: 1.5rem;
+}
+
+.stat {
+  flex: 0 1 140px;
+  background: rgba(245, 160, 69, 0.967);
+  border-radius: 10px;
+  padding: 1rem 0.8rem;
+  text-align: center;
+  backdrop-filter: blur(8px);
+  border: 1px solid rgba(245, 160, 69, 0.967);
+}
+
+.stat-number {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #383737;
+  margin-bottom: 0.3rem;
+}
+
+.stat-label {
+  font-size: 0.8rem;
+  color: #f8fbfb;
+  opacity: 0.95;
+}
+
+/* Projects */
+.projects {
+  padding:3rem 0;
+}
+
+.lead {
+  color:var(--muted);
+}
+
+.project-cards {
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+  gap:1rem;
+  margin-top:1rem;
+}
+
+.card {
+  background:#f5c28c;
+  border-radius:12px;
+  box-shadow:0 6px 18px rgba(0,0,0,0.06);
+  overflow:hidden;
+  transition:transform .2s;
+}
+
+.card:hover {
+  transform:translateY(-4px);
+}
+
+.card-img {
+  height:120px;
+  background:linear-gradient(135deg,var(--violet-light),var(--blue-light));
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  color:#f5c28c;
+  font-weight:600;
+}
+
+.card-body {
+  padding:1rem;
+}
+
+.card-body h3 {
+  margin:0 0 0.4rem;
+}
+
+.card-body p {
+  color:var(--muted);
+  margin:0;
+}
+
+#antioquia-caucasia {
+  background-image: url("../img/img1.jpg");
+  background-size: cover;
+  background-position: center;
+}
+
+#guajira {
+  background-image: url("../img/child.jpg");
+  background-size: cover;
+  background-position: center;
+}
+
+#cordoba {
+  background-image: url("../img/img2.jpg");
+  background-size: cover;
+  background-position: center;
+}
+
+/* Newsletter */
+.newsletter {
+  padding:2rem 0;
+  background:linear-gradient(90deg, var(--violet-light) 0%, var(--blue-light) 100%);
+  color:#040404;
+}
+
+.newsletter-inner {
+  display:flex;
+  flex-wrap:wrap;
+  justify-content:space-between;
+  align-items:center;
+  gap:1rem;
+}
+
+.subscribe-form {
+  display:flex;
+  gap:0.5rem;
+}
+
+.subscribe-form input {
+  padding:0.6rem 0.8rem;
+  border-radius:8px;
+  border:none;
+  outline:none;
+}
+
+.form-message {
+  margin-top:0.6rem;
+}
+
+.footer {
+    width: 100%;
+    display: block;
+}
+
+.footer-social {
+    width: 100%;
+    background-color: #f1efef;
+    padding: 25px 0;
+}
+
+.social-icons {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 25px;
+}
+
+.social-icons a {
+    color: rgb(248, 248, 246);
+    font-size: 24px;
+    text-decoration: none;
+}
+
+.social-icons a:hover {
+    color: #f8faf8;
+}
+
+.footer-bottom {
+    width: 100%;
+    background-color: #333;
+    color: rgb(251, 250, 251);
+    text-align: center;
+    padding: 20px 0;
+}
+  
+.btn-dona:hover {
+    background-color: #0c0c0b;
+  transform: scale(1.05);
+}
+
+  .footer-social {
+    background-color: #e19751;
+    padding: 20px 0;
+}
+
+.social-icons {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 25px;
+}
+
+.social-icons a {
+    color: rgb(239, 236, 239);
+    font-size: 24px;
+    text-decoration: none;
+    transition: transform 0.3s ease, color 0.3s ease;
+}
+
+.social-icons a:hover {
+    color: #333333;
+    transform: scale(1.2);
+}
+
+.footer-bottom {
+    background-color: #333333;
+    color: rgb(249, 252, 252);
+    text-align: center;
+    padding: 15px 0;
+    font-size: 14px;
+}
+
+.footer-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 30px;
+  max-width: 800px;
+  margin: 0 auto 20px;
+  text-align: left;
+  }
+  
+@media (min-width: 768px) {
+  .footer-grid {
+  grid-template-columns: 1fr 1fr;
+  }
+  }
+  
+.contacto, .redes-sociales {
+  padding: 0 10px;
+}
+  
+.contacto h3, .redes-sociales h3 {
+  font-size: 1.2rem;
+  margin-bottom: 15px;
+}
+  
+.contacto address p {
+  margin: 5px 0;
+}
+  
+.contacto a {
+    color: #020202;
+    text-decoration: none;
+    transition: color 0.3s;
+    }
+  
+.contacto a:hover {
+  text-decoration: underline;
+}
+  
+.redes-iconos a {
+  color: #f5f4f4;
+  margin: 0 10px;
+  font-size: 24px;
+  transition: color 0.3s;
+}
+  
+.redes-iconos a:hover {
+    color: #050505;
+}
+  
+.footer-bottom {
+    border-top: 1px solid #9AAF94;
+  padding-top: 20px;
+  position: relative;
+}

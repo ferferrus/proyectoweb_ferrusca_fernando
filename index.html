@@ -20,5 +20,158 @@
 </head>
 <body>
 
+    <header class="header">
+    <div class="container header-inner">
+      <a class="logo" href="#">
+        <img src="img/logo.png" alt="Logo Restaurante Ferrus" height="70" />
+      </a>
+      <nav class="main-nav" id="mainNav">
+        <ul>
+          <li><a href="#Menu">Menu</a></li>
+          <li><a href="#Bebidas">bebidas</a></li>
+          <li><a href="#A domicilio">a domicilio</a></li>
+          <li><a class="btn-shop" href="#shop">Dona</a></li>
+        </ul>
+      </nav>
+      <button id="menuToggle" class="menu-toggle">☰</button>
+    </div>
+  </header>
+
+  <!-- AQUÍ INICIA EL MAIN   -->
+  <main>
+    <!-- HERO con video, si no quiero video, pendiente cambiarlo -->
+    <section class="hero video-hero">
+      <video class="hero-video" id="heroVideo" autoplay loop playsinline>
+        <source src="img/Video_pies_con_cora.mp4" type="video/mp4" />
+      </video>
+      <div class="hero-overlay"></div>
+
+ <!-- Estos son los botones que estan dentro del video-->
+
+      <div class="hero-content container">
+        <div class="hero-actions">
+          <a class="btn primary" href="https://forms.gle/9bGxM41iZmSR8NVj6"> Conoce nuestra Historia  </a>
+          <a class="btn outline" href="#voluntariado"> </a>
+        </div>
+ <!-- Estas tarjetas son para colocar estadisticas y la clase de stat es para colocar datos-->
+        <div class="stats-grid">
+          <div class="stat">
+            <div class="stat-number">Mas de 150</div>
+            <div class="stat-label">Sucursales</div>
+          </div>
+          <div class="stat">
+            <div class="stat-number">Mas 6.000</div>
+            <div class="stat-label">Personal capacitado</div>
+          </div>
+          <div class="stat">
+            <div class="stat-number">Mas 24</div>
+            <div class="stat-label">Sucursales Tematizadas</div>
+          </div>
+        </div>
+      </div>
+    </section> <!--Fin hero y cierra las estadísticas y todo-->
+  
+
+<!-- AQUI HAY TRES TARJETAS PARA DESTACAR PROYECTOS, SERVICIOS, VENTAS, ETC.-->
+    <section id="proyectos" class="projects container">
+      <h2>Mexico</h2>
+      <p class="lead"> Los mejores tacos de todo mexico, preparados al momento y con un sazon inigualable, ven y disfruta del
+        sabor autentico de los tacos Mexicanos. </p>
+
+      <div class="project-cards">
+        <article class="card">
+          <div class="card-img" id="antioquia-caucasia"></div>
+          <div class="card-body">
+            <h3>Descripcion y ubicaciones </h3>
+            <p>Somos la taquería donde el verdadero sabor mexicano se sirve al instante. Nos especializamos en tacos clásicos 
+              al pastor, carne asada, suadero y birria, preparados frente a ti con ingredientes frescos, tortillas calientes y salsas caseras tatemadas. Llevamos la calidez y el sazón inigualable de la cocina de calle a una experiencia rápida y de alta calidad.
+
+Nuestras Ubicaciones
+
+México: Ciudad de México, Querétaro, Toluca, Cancún, Acapulco y Monterrey.
+
+Estados Unidos: Houston, California y Colorado.</p>
+  
+          </div>
+        </article>
+        <article class="card">
+          <div class="card-img" id="cordoba"></div>
+          <div class="card-body">
+            <h3>Algunos de los originales </h3>
+            <p>Menu de Tacos
+
+Tacos al Pastor
+
+Clásica carne de cerdo marinada en adobo tradicional
+ con achiote y especias, asada lentitamente al pastor y fileteada 
+ al momento con un toque de piña asada.
+
+Acompañamientos: Piña fresca, cilantro, cebolla picada
+ y salsa verde de chile serrano.
+
+Tacos de Carne Asada
+
+Jugosos cortes de res marinados con sazón de la casa, cocinados 
+a la plancha o al carbón al instante para mantener toda su suavidad y sabor.
+
+Acompañamientos: Guacamole fresco, cebollitas cambray asadas, 
+limón y salsa roja taquera de jitomate tatemado.
+
+Tacos de Suadero
+
+Suave carne de res confitada lentamente en su
+propia grasa y dorada al momento en el comal para lograr 
+una textura crujiente por fuera y jugosa por dentro.
+
+Acompañamientos:
+Cilantro, cebolla picada, limones frescos y salsa roja de chile de árbol.
+
+Tacos de Birria de Res
+
+Tierna carne de res adobada en una mezcla 
+rica de chiles secos y especias de la casa, servida 
+en tortilla caliente ligeramente pasada por el consome.
+
+Acompañamientos: Tazón de consomé caliente con cebolla y cilantro 
+para chopear, limones y salsa macha de chile morita.</p>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section id="contacto" class="newsletter">
+      <div class="container newsletter-inner">
+        <div>
+          <h2>¡Sabor Original que no puedes dejar pasar!</h2>
+          <p>Menos estrés, más sazón: ¡un buen taco te alegra el corazón!
+            CONOCENOS
+          </p>
+        </div>
+        <form id="subscribeForm" class="subscribe-form" novalidate>
+          <input id="email" type="email" placeholder="Agenda tu reservacion " required />
+          <button class="btn primary" type="submit">ENVIAR</button>
+        </form>
+        <div id="formMessage" class="form-message"></div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+<div class="footer-social">
+    <div class="container social-icons">
+      <a href="https://www.facebook.com/" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+      <a href="https://www.instagram.com/" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+      <a href="https://www.youtube.com/" aria-label="YouTube"><i class="fa-brands fa-youtube"></i></a>
+      <a href="https://www.linkedin.com/in/yuritsa-paez-a85920121/" aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
+      <a href="https://x.com/?lang=es" aria-label="X (Twitter)"><i class="fa-brands fa-x-twitter"></i></a>
+     
+    </div>
+  </div>
+
+    <div class="footer-bottom">
+      <div class="container">&copy; <span id="anio"></span> TacosFerYFamilia</div>
+    </div>
+  </footer>
+
 </body>
 </html>
