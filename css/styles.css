@@ -39,21 +39,21 @@
   margin: 0;
 }
   
-  /* BOTONES DE INICIO Y BARRA DE NAVEGACIÓN */
-  .mainnav{
+/* BOTONES DE INICIO Y BARRA DE NAVEGACIÓN */
+
+.main-nav ul{
     margin-left: auto;
-  }
-  .main-nav ul {
     display: flex;
     list-style: none;
 }
-  
 .main-nav ul li a {
-  display: flex;
-  color: rgb(236, 224, 94);
+    color: grey;
+    text-decoration: none;
+    margin-left: 2rem;
+    display: flex;
   list-style: none; /* Quita los puntos (viñetas) de la lista. */
   gap: 15px; /*Espacio entre las secciones del menú nav */
-}
+  }
   
 .btn-dona {
     background-color: #d8713d;
@@ -135,6 +135,150 @@
   opacity: 0.95;
 }
 
+/* Carrusel de imágenes */
+.carousel-section {
+  padding: 3rem 0;
+  text-align: center;
+}
+
+.carousel {
+  position: relative;
+  max-width: 900px;
+  margin: 1.5rem auto 0;
+  overflow: hidden;
+  border-radius: 12px;
+  box-shadow: 0 6px 18px rgba(0,0,0,0.08);
+}
+
+.carousel-track {
+  display: flex;
+  transition: transform 0.5s ease-in-out;
+}
+
+.carousel-slide {
+  min-width: 100%;
+  position: relative;
+}
+
+.carousel-slide img {
+  width: 100%;
+  height: 380px;
+  object-fit: cover;
+  display: block;
+}
+
+.carousel-caption {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: 0;
+  padding: 0.8rem;
+  background: rgba(0, 0, 0, 0.5);
+  color: #fff;
+  font-weight: 600;
+}
+
+.carousel-btn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: rgba(255, 255, 255, 0.8);
+  border: none;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  cursor: pointer;
+  font-size: 1rem;
+  color: #333;
+  transition: background 0.3s ease;
+}
+
+.carousel-btn:hover {
+  background: #E8A0BF;
+  color: #fff;
+}
+
+.carousel-btn.prev {
+  left: 12px;
+}
+
+.carousel-btn.next {
+  right: 12px;
+}
+
+.carousel-dots {
+  display: flex;
+  justify-content: center;
+  gap: 8px;
+  margin-top: 0.8rem;
+}
+
+.carousel-dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: #ccc;
+  cursor: pointer;
+  border: none;
+  padding: 0;
+  transition: background 0.3s ease;
+}
+
+.carousel-dot.active {
+  background: #E8A0BF;
+}
+/* Ajustes de botones y stats SUPERPUESTOS dentro del carrusel */
+.carousel .hero-content {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 5;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 1rem;
+  background: rgba(0, 0, 0, 0.35); /* oscurece la imagen para que se lea el texto */
+}
+
+.carousel .hero-actions {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  margin-bottom: 1rem;
+  flex-wrap: wrap;
+}
+
+.carousel .btn.primary {
+  background: linear-gradient(45deg, #E8A0BF, #f3c6da);
+  color: #fff;
+}
+
+.carousel .btn.outline {
+  border: 2px solid #fff;
+  color: #fff;
+}
+
+.carousel .btn.outline:hover {
+  background: rgba(255, 255, 255, 0.15);
+}
+
+.carousel .stat {
+  background: rgba(255, 255, 255, 0.15);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  backdrop-filter: blur(8px);
+}
+
+.carousel .stat-number {
+  color: #fff;
+}
+
+.carousel .stat-label {
+  color: #f1f5f9;
+}
 /* Projects */
 .projects {
   padding:3rem 0;

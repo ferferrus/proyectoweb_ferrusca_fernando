@@ -41,6 +41,7 @@
   <main>
     <!-- HERO con video, si no quiero video, pendiente cambiarlo -->
     <section class="hero video-hero">
+      <!-- video class="hero-video" id="heroVideo"-->
       <video class="hero-video" id="heroVideo" autoplay loop playsinline>
         <source src="img/Video_pies_con_cora.mp4" type="video/mp4" />
       </video>
@@ -48,7 +49,34 @@
 
  <!-- Estos son los botones que estan dentro del video-->
 
-      <div class="hero-content container">
+
+   <!--/section> <!--Fin hero y cierra las estadísticas y todo-->
+  
+     <!-- CARRUSEL DE IMÁGENES / LANZAMIENTOS / PRODUCTOS ETC -->
+    <section id="lanzamientos" class="carousel-section container">
+      <h2>Nuevos Lanzamientos</h2>
+
+     
+      
+      <div class="carousel" id="carousel">
+        <div class="carousel-track" id="carouselTrack">
+          <div class="carousel-slide">
+            <img src="img/tacos.png" alt="Consultorías TechIY">
+            <p class="carousel-caption">Los Mejores</p>
+          </div>
+          <div class="carousel-slide">
+            <img src="img/risas.jpg" alt="Talleres TechIY">
+            <p class="carousel-caption">Familiar</p>
+          </div>
+          <div class="carousel-slide">
+            <img src="img/aguas.png" alt="Asesorías TechIY">
+            <p class="carousel-caption">Aguas Frescas </p>
+          </div>
+        </div>
+
+
+
+         <div class="hero-content container">
         <div class="hero-actions">
           <a class="btn primary" href="https://forms.gle/9bGxM41iZmSR8NVj6"> Conoce nuestra Historia  </a>
           <a class="btn outline" href="#voluntariado"> </a>
@@ -69,8 +97,14 @@
           </div>
         </div>
       </div>
-    </section> <!--Fin hero y cierra las estadísticas y todo-->
-  
+
+        <button class="carousel-btn prev" id="carouselPrev" aria-label="Anterior">&#10094;</button>
+        <button class="carousel-btn next" id="carouselNext" aria-label="Siguiente">&#10095;</button>
+
+        <div class="carousel-dots" id="carouselDots"></div>
+      </div>
+    </section>
+    <!-- FIN CARRUSEL -->
 
 <!-- AQUI HAY TRES TARJETAS PARA DESTACAR PROYECTOS, SERVICIOS, VENTAS, ETC.-->
     <section id="proyectos" class="projects container">
