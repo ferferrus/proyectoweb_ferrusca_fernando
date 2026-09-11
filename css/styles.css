@@ -1,12 +1,13 @@
 /* Reset y Fuentes */
-*{
+        *{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: 'Arial', sans-serif;
+    font-family: "Orbitron", sans-serif;
 }
 
-.header {
+
+    .header {
     background: #d9a06a;
     color: #e6ce5a;
     padding: 1rem;
@@ -143,7 +144,7 @@
 
 .carousel {
   position: relative;
-  max-width: 900px;
+  max-width: 1600px;
   margin: 1.5rem auto 0;
   overflow: hidden;
   border-radius: 12px;
@@ -244,6 +245,11 @@
   background: rgba(0, 0, 0, 0.35); /* oscurece la imagen para que se lea el texto */
 }
 
+.carousel .hero-content a, 
+.carousel .hero-content button{
+    pointer-events: auto;
+}
+
 .carousel .hero-actions {
   display: flex;
   justify-content: center;
@@ -281,7 +287,7 @@
 }
 /* Projects */
 .projects {
-  padding:3rem 0;
+  padding:3rem 2rem;
 }
 
 .lead {
@@ -291,8 +297,8 @@
 .project-cards {
   display:grid;
   grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
-  gap:1rem;
-  margin-top:1rem;
+  gap:2rem;
+  margin-top:2rem;
 }
 
 .card {
@@ -350,7 +356,7 @@
 
 /* Newsletter */
 .newsletter {
-  padding:2rem 0;
+  padding:1rem 2rem;
   background:linear-gradient(90deg, var(--violet-light) 0%, var(--blue-light) 100%);
   color:#040404;
 }
@@ -382,6 +388,9 @@
 .footer {
     width: 100%;
     display: block;
+    background-color: #e19751;
+    padding: 40px 0px;
+    text-align: center;
 }
 
 .footer-social {
@@ -505,4 +514,18 @@
     border-top: 1px solid #9AAF94;
   padding-top: 20px;
   position: relative;
+}
+
+.subscribe-form {
+  display: flex;
+  gap: 0.5rem;
+
+}
+
+.subscribe-form input {
+  padding: o.6rem 0.8rem;
+  border-radius: 8px;
+  border: none;
+  outline: none;
+  background: rgb (0, 0, 0);
 }
