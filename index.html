@@ -1,232 +1,430 @@
 <!DOCTYPE html>
-<!--Doctype indica que el tipo de documento es HTML-->
-<!--ENTREGABLE 2-->
-<!--Este desarrollo web es diseñado por FERNANDO FERRUSCA-->
-<html lang="es">
-    <!--Lang esta indicado que es español-->
-<head>
-    <!-- Dentro del Head van las configuraciones de la app o sitio web-->
+<html lang="es"> 
+    <head><!-- AQUI VIENE LOS METADATOS Y LA CONEXION al style.css-->
     <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"
+<meta name="author" content="Fernando Ferrusca">
+<meta name="description" content="Es un diseño de un carrito de compras">
 
-    <!-- esta meta dato permite todos los caracteres--> 
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!--El meta dato de viewport es para que se adapte a cualquier pantalla-->
-    <meta name="author" content="Fernando Ferrusca">
-    <title>CINEFERRUS</title>
-    <!-- El título como voy a aparecer en la web-->
-    <link rel="stylesheet" href="css/styles.css">
-    <!--link rel enlaza con la carpeta y el archivo del css-->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
-    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400..900&display=swap" rel="stylesheet">
+<meta name="keywords" content="Ropa, tenis, bolsas, fundas, hype, barato, descuento, collares, bolsas,
+anillos, bracaletes, joyeria, accesorios, juguetes">
+<!--esto es el titulo de la pagina-->
+<title>Carrito de compras - Yupoo </title>
+<!--esto enlaza con la hoja de estilos-->
+<link rel="stylesheet" href="css/style.css">
 
-<body>
+<script src="https://cdn.tailwindcss.com/3.4.17"></script>
+<script src="https://cdn.jsdelivr.net/npm/lucide@0.577.0/dist/umd/lucide.min.js"></script>
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&amp;family=Fraunces:opsz,wght@9..144,600;9..144,700&amp;display=swap" rel="stylesheet">
+  </head>
 
-    <header class="header">
-    <div class="container header-inner">
-      <a class="logo" href="#">
-        <img src="img/logo.png" alt="Logo Restaurante Ferrus" height="70" />
+
+  <body class="paper-texture">
+  <body class="body">
+
+
+    <!--===============ENCABEZADO==================-->
+    <header class="site-header">
+        <div class="container header-inner">   
+           <a href="#inicio" class="logo">
+        <span class="logo-icon">$</span>
+        Yupoo
       </a>
-      <nav class="main-nav" id="mainNav">
+      <nav class="main-nav">
         <ul>
-          <li><a href="#Menu">Menu</a></li>
-          <li><a href="#Bebidas">Bebidas</a></li>
-          <li><a href="#A domicilio">Delivery</a></li>
-          <li><a href="#redes">redes</a></li>
-          <li><a classs="btn-shop" href="#shop">brbidasd</a></li>
+          <li><a href="#inicio">Inicio</a></li>
+          <li><a href="#productos">Productos</a></li>
+          <li><a href="#beneficios">Conocenos</a></li>
+          <li><a href="#oferta">Oferta</a></li>
+          <li><a href="#contacto">Contacto</a></li>
         </ul>
+        <button type="button" class="btn primary" onclick="openWhatsApp('Hola, quiero hacer un pedido en Dulce Detalle.')">
+          <i data-lucide="message-circle"></i> Pedir ahora
+        </button>
       </nav>
-      <button id="menuToggle" class="menu-toggle">☰</button>
-    </div>
-  </header>
-
-  <!-- AQUÍ INICIA EL MAIN   -->
-  <main>
-    <!-- HERO con video, si no quiero video, pendiente cambiarlo -->
-    <section class="hero video-hero">
-      <!-- video class="hero-video" id="heroVideo"-->
-      <video class="hero-video" id="heroVideo" autoplay loop playsinline>
-        <source src="img/Video_pies_con_cora.mp4" type="video/mp4" />
-      </video>
-      <div class="hero-overlay"></div>
-
- <!-- Estos son los botones que estan dentro del video-->
-
-
-   <!--/section> <!--Fin hero y cierra las estadísticas y todo-->
-  
-     <!-- CARRUSEL DE IMÁGENES / LANZAMIENTOS / PRODUCTOS ETC -->
-    <section id="lanzamientos" class="carousel-section container">
-      <h2>Nuevos Lanzamientos</h2>
-
-     
+      <button id="menu-toggle" class="menu-toggle" aria-label="Abrir menú" aria-expanded="false" 
+      aria-controls="mobile-menu">☰</button>
+        </div>
       
-      <div class="carousel" id="carousel">
-        <div class="carousel-track" id="carouselTrack">
-          <div class="carousel-slide">
-            <img src="img/tacos.png" alt="Consultorías TechIY">
-            <p class="carousel-caption">Los Mejores</p>
+      
+
+
+<!--===================MAIN NAV MOBILE==================-->
+
+    <nav id="mobile-menu" class="mobile-nav">
+ <ul>
+          <li><a href="#inicio">Inicio</a></li>
+          <li><a href="#productos">Productos</a></li>
+          <li><a href="#beneficios">Conocenos</a></li>
+          <li><a href="#oferta">Oferta</a></li>
+          <li><a href="#contacto">Contacto</a></li>
+        </ul>
+ <button type="button" class="btn primary" onclick="openWhatsApp('Hola, quiero hacer un pedido en Dulce Detalle.')">
+          <i data-lucide="message-circle"></i> Pedir ahora
+        </button>
+    </nav>
+
+</header>
+
+<main>
+
+ <!-- ================= HERO ================= -->
+    <section id="inicio" class="hero">
+      <div class="container hero-inner">
+        <div class="hero-text reveal">
+          <p class="eyebrow">La calidad mas fuerte que hay</p>
+          <h1>Los productos de moda mas actuales </h1>
+          <p class="lead">La tienda que buscabas para iniciar tu negocio, preicos de mayoreo y menudeo.</p>
+          <div class="hero-actions">
+            <a href="#productos" class="btn primary">Ver productos</a>
+            <button type="button" class="btn outline" onclick="openWhatsApp('Hola, vi su página y me gustaría conocer sus regalos personalizados.')">Comprar por WhatsApp</button>
           </div>
-          <div class="carousel-slide">
-            <img src="img/risas.jpg" alt="Talleres TechIY">
-            <p class="carousel-caption">Familiar</p>
-          </div>
-          <div class="carousel-slide">
-            <img src="img/aguas.png" alt="Asesorías TechIY">
-            <p class="carousel-caption">Aguas Frescas </p>
-          </div>
+          <p class="trust"><i data-lucide="heart"></i> Más de 50 tiendas de lujo, hype y streatware</p>
         </div>
-
-
-
-         <div class="hero-content container">
-        <div class="hero-actions">
-          <a class="btn primary" href="https://forms.gle/9bGxM41iZmSR8NVj6"> Conoce nuestra Historia  </a>
-          <a class="btn outline" href="#voluntariado"> </a>
+        <div class="hero-image reveal">
+          <img src="img/LOGO.jpg" alt="Logo de tienda de ropa Fernando Ferrusca.">
+          <span class="tag tag-love">Calidad espejo</span>
+          <span class="tag tag-custom">Entregas globales</span>
         </div>
- <!-- Estas tarjetas son para colocar estadisticas y la clase de stat es para colocar datos-->
-        <div class="stats-grid">
-          <div class="stat">
-            <div class="stat-number">Mas de 150</div>
-            <div class="stat-label">Sucursales</div>
-          </div>
-          <div class="stat">
-            <div class="stat-number">Mas 6.000</div>
-            <div class="stat-label">Personal capacitado</div>
-          </div>
-          <div class="stat">
-            <div class="stat-number">Mas 24</div>
-            <div class="stat-label">Sucursales Tematizadas</div>
-          </div>
-        </div>
-      </div>
-
-        <button class="carousel-btn prev" id="carouselPrev" aria-label="Anterior">&#10094;</button>
-        <button class="carousel-btn next" id="carouselNext" aria-label="Siguiente">&#10095;</button>
-
-        <div class="carousel-dots" id="carouselDots"></div>
-      </div>
-    </section>
-    <!-- FIN CARRUSEL -->
-
-<!-- AQUI HAY TRES TARJETAS PARA DESTACAR PROYECTOS, SERVICIOS, VENTAS, ETC.-->
-    <section id="proyectos" class="projects container">
-      <h2>Mexico</h2>
-      <p class="lead"> Los mejores tacos de todo mexico, preparados al momento y con un sazon inigualable, ven y disfruta del
-        sabor autentico de los tacos Mexicanos. </p>
-
-      <div class="project-cards">
-        <article class="card">
-          <div class="card-img" id="antioquia-caucasia"></div>
-          <div class="card-body">
-            <h3>Descripcion y ubicaciones </h3>
-            <p>Somos la taquería donde el verdadero sabor mexicano se sirve al instante. Nos especializamos en tacos clásicos 
-              al pastor, carne asada, suadero y birria, preparados frente a ti con ingredientes frescos, tortillas calientes y salsas caseras tatemadas. Llevamos la calidez y el sazón inigualable de la cocina de calle a una experiencia rápida y de alta calidad.
-
-Nuestras Ubicaciones
-
-México: Ciudad de México, Querétaro, Toluca, Cancún, Acapulco y Monterrey.
-
-Estados Unidos: Houston, California y Colorado.</p>
-  
-          </div>
-        </article>
-        <article class="card">
-          <div class="card-img" id="cordoba"></div>
-          <div class="card-body">
-            <h3>Algunos de los originales </h3>
-            <p>Menu de Tacos
-
-Tacos al Pastor
-
-Clásica carne de cerdo marinada en adobo tradicional
- con achiote y especias, asada lentitamente al pastor y fileteada 
- al momento con un toque de piña asada.
-
-Acompañamientos: Piña fresca, cilantro, cebolla picada
- y salsa verde de chile serrano.
-
-Tacos de Carne Asada
-
-Jugosos cortes de res marinados con sazón de la casa, cocinados 
-a la plancha o al carbón al instante para mantener toda su suavidad y sabor.
-
-Acompañamientos: Guacamole fresco, cebollitas cambray asadas, 
-limón y salsa roja taquera de jitomate tatemado.
-
-Tacos de Suadero
-
-Suave carne de res confitada lentamente en su
-propia grasa y dorada al momento en el comal para lograr 
-una textura crujiente por fuera y jugosa por dentro.
-
-Acompañamientos:
-Cilantro, cebolla picada, limones frescos y salsa roja de chile de árbol.
-
-Tacos de Birria de Res
-
-Tierna carne de res adobada en una mezcla 
-rica de chiles secos y especias de la casa, servida 
-en tortilla caliente ligeramente pasada por el consome.
-
-Acompañamientos: Tazón de consomé caliente con cebolla y cilantro 
-para chopear, limones y salsa macha de chile morita.</p>
-          </div>
-        </article>
       </div>
     </section>
 
-    <section id="contacto" class="newsletter">
-      <div class="container newsletter-inner">
-        <div>
-          <h2>¡Sabor Original que no puedes dejar pasar!</h2>
-          <p>Menos estrés, más sazón: ¡un buen taco te alegra el corazón!
-            CONOCENOS
-          </p>
+<!-- ================= PRODUCTOS ================= -->
+    <section id="productos" class="products">
+      <div class="container">
+        <div class="section-heading reveal">
+          <p class="eyebrow">Calidad asegurada</p>
+          <h2>Nuestros productos</h2>
+          <p class="lead">Elige tu talla y nosotros hacemos lo demas</p>
         </div>
-        <form id="subscribeForm" class="subscribe-form" novalidate>
-          <input id="email" type="email" placeholder="Agenda tu reservacion " required />
-          <button class="btn primary" type="submit">ENVIAR</button>
-        </form>
-        <div id="formMessage" class="form-message"></div>
+        <div class="product-grid">
+          <article class="product-card reveal">
+            <img src="img/imagen1.jpg" alt="Caja de regalo rosa con listón y chocolates gourmet.">
+            <div class="product-body">
+              <span class="tag">Caliente</span>
+              <h3>Louis Vuitton Trainer Negro</h3>
+              <p class="price">$2,200 MXN</p>
+              <p class="description">Los clásicos tenis LV Trainer de la colección de hombre de Louis Vuitton se reinterpretan 
+                por primera vez para mujer. Este modelo creado por Virgil Abloh está confeccionado en suave piel 
+              de becerro y tejido denim Monograma y se inspira en el calzado vintage de basquetbol.</p>
+              <button type="button" class="btn card" onclick="openModal('modal-caja')">Ver producto</button>
+            </div>
+          </article>
+          <article class="product-card reveal">
+            <img src="img/imagen2.jpg" alt="Velas artesanales en frascos de vidrio ámbar.">
+            <div class="product-body">
+              <span class="tag">Favorito</span>
+              <h3>Burberry shirt classic monogram</h3>
+              <p class="price">$1,300 MXN</p>
+              <p class="description">Una camisa de manga larga confeccionada en algodón ligero, tejida con 
+                el característico estampado Burberry Check en tono beige arena.El diseño presenta un corte 
+                relajado y lleva discretamente bordado nuestro logotipo en letra cursiva.</p>
+              <button type="button" class="btn card" onclick="openModal('modal-vela')">Ver producto</button>
+            </div>
+          </article>
+          <article class="product-card reveal">
+            <img src="img/imagen4.jpg" alt="Taza floral personalizada para regalo.">
+            <div class="product-body">
+              <span class="tag">Favorito</span>
+              <h3>Bracaletes Cartier unisex plata y oro</h3>
+              <p class="price">$760 MXN</p>
+              <p class="description">El origen de la colección LOVE es la emblemática pulsera creada en Nueva York en 1969. 
+                Reconocemos esta pulsera ovalada, expresión de la visión del diseño de Cartier, por su motivo 
+                radical e innovador, que se atreve a mostrar los tornillos. Más allá de su diseño, LOVE es una colección manifiesto que sella los sentimientos.</p>
+              <button type="button" class="btn card" onclick="openModal('modal-taza')">Ver producto</button>
+            </div>
+          </article>
+          <article class="product-card reveal">
+            <img src="img/imagen6.jpg" alt="Suculentas decorativas envueltas para regalo.">
+            <div class="product-body">
+              <span class="tag">Favorito</span>
+              <h3>Knot Lock de Bottega Veneta.</h3>
+              <p class="price">$1,400 MXN</p>
+              <p class="description">La línea Knot Lock presenta una silueta sofisticada y propone una interpretación moderna
+                 del icónico cierre metálico en forma de nudo (knot). Transiciona con fluidez de un bolso cruzado (crossbody) 
+                 a un bolso de mano (clutch con asa superior), armonizando una estructura en forma de sobre con la
+                  refinada técnica artesanal del tejido Intrecciato..</p>
+              <button type="button" class="btn card" onclick="openModal('modal-jardin')">Ver producto</button>
+            </div>
+          </article>
+          <article class="product-card reveal">
+            <img src="img/imagen9.jpg" alt="Regalos y postres coloridos para celebración de cumpleaños.">
+            <div class="product-body">
+              <span class="tag">Favorito</span>
+              <h3>Bolso Clásico 11.12 (Classic Flap Bag)</h3>
+              <p class="price">$1,100 MXN</p>
+              <p class="description">Símbolo de elegancia y excelencia, el bolso clásico 11.12 está confeccionado con el savoir-faire 
+                y la precisión de una prenda de alta costura. Diseñado para ofrecer una estética atemporal y funcionalidad en
+                 movimiento, combina la icónica piel acolchada con el icónico cierre de doble C entrelazada y una cadena entrelazada 
+                 con piel para llevar al hombro o cruzado.</p>
+              <button type="button" class="btn card" onclick="openModal('modal-kit')">Ver producto</button>
+            </div>
+          </article>
+          <article class="product-card reveal">
+            <img src="img/imagen10.jpg" alt="Tarjetas elegantes decoradas con flores secas y lavanda.">
+            <div class="product-body">
+              <span class="tag">Caliente</span>
+              <h3>Cassandre Envelope Wallet (o Monogram Envelope Wallet) de Saint Laurent (YSL)</h3>
+              <p class="price">$600 MXN</p>
+              <p class="description">Cartera pequeña de solapa estructurada con las iniciales YSL de metal en el centro y costuras
+                 acolchadas en forma de espiga. Un accesorio compacto e icónico diseñado para ofrecer la máxima funcionalidad
+                  con un formato elegante.</p>
+              <button type="button" class="btn card" onclick="openModal('modal-tarjeta')">Ver producto</button>
+            </div>
+          </article>
+        </div>
       </div>
     </section>
-  </main>
 
-  <footer>
-       <footer id=""redes">
-        <div class="footer-grid">
-      <div class="contacto">
-        <h3>Contacto</h3>
-        <address>
-          <p>
-            <i class="fa fa-map-marker-alt"></i>
-            <a href="https://share.google/GvciYIfHbl0f2MnTU" target="_blank" rel="noreferrer noopener">
-            <span style="color: #b9ddff; font-weight: bold">Ubicación: </span> Despacho Las Divinas
-            </a>
-          </p>
-          <p>
-            <i class="fa fa-phone"></i>
-            <span style="color: #b9ddff; font-weight: bold">Teléfono: </span> <a href="tel:+5519224580"> 55 1922 4580</a>
-          </p>
-        </address>
+<!-- ================= BENEFICIOS ================= -->
+    <section id="beneficios" class="benefits">
+      <div class="container">
+        <div class="section-heading reveal">
+          <h2>¿Por qué comprarnos?</h2>
+        </div>
+        <div class="benefits-grid">
+          <article class="benefit-card reveal">
+            <div class="benefit-icon"><i data-lucide="sparkles"></i></div>
+            <h3>Prodcutos certificados</h3>
+            <p>Todos los productos vienen con un certificado de calidad por parte de la tienda.</p>
+          </article>
+          <article class="benefit-card reveal">
+            <div class="benefit-icon"><i data-lucide="message-circle-heart"></i></div>
+            <h3>Atención rápida</h3>
+            <p>Te respondemos con cercanía y claridad.</p>
+          </article>
+          <article class="benefit-card reveal">
+            <div class="benefit-icon"><i data-lucide="truck"></i></div>
+            <h3>Envíos</h3>
+            <p>Tu prenda llega a donde lo necesites.</p>
+          </article>
+          <article class="benefit-card reveal">
+            <div class="benefit-icon"><i data-lucide="mouse-pointer-click"></i></div>
+            <h3>Compra fácil</h3>
+            <p>Elige, agrega al carrito y compra.</p>
+          </article>
+        </div>
       </div>
+    </section>
+    <!-- ================= OFERTA ================= -->
+    <section id="oferta" class="offer">
+      <div class="container">
+        <div class="offer-panel reveal">
+          <span class="tag tag-light">Oferta de bienvenida</span>
+          <h2>10% de descuento en tu primer pedido</h2>
+          <p>Comienza tu nuevo guarda ropa con Yupoo, barato, calidad y confianza. </p>
+          <button id="offer-button" type="button" class="btn butter" onclick="revealOffer()">Quiero mi descuento</button>
+          <div id="offer-reveal" class="offer-reveal hidden" aria-live="polite">
+            <p class="offer-reveal-title">¡Listo! Tu código de bienvenida es:</p>
+            <div class="offer-code-row">
+              <span class="offer-code">HYPE12</span>
+              <button id="copy-code" type="button" class="btn outline" onclick="copyDiscount()">Copiar código</button>
+              <button type="button" class="btn whatsapp" onclick="openWhatsApp('Hola, quiero usar mi código DULCE10 en mi primer pedido.')">Pedir por WhatsApp</button>
+            </div>
+            <p id="copy-feedback" class="copy-feedback hidden" role="status">Código copiado</p>
+          </div>
+        </div>
+      </div>
+    </section>      
 
-    <div class="footer-social">
-    <div class="container social-icons">
-      <a href="https://www.facebook.com/" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
-      <a href="https://www.instagram.com/" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
-      <a href="https://www.youtube.com/" aria-label="YouTube"><i class="fa-brands fa-youtube"></i></a>
-      <a href="https://www.linkedin.com/in/yuritsa-paez-a85920121/" aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
-      <a href="https://x.com/?lang=es" aria-label="X (Twitter)"><i class="fa-brands fa-x-twitter"></i></a>
-     
-    </div>
-  </div>
 
-    <div class="footer-bottom">
-      <div class="container">&copy; <span id="anio"></span> TacosFerYFamilia</div>
+
+<!-- ================= TESTIMONIOS ================= -->
+    <section class="testimonials">
+      <div class="container">
+        <div class="section-heading reveal">
+          <p class="eyebrow">Puedes confiar en nosotros</p>
+          <h2>Lo que dicen nuestros clientes</h2>
+        </div>
+        <div class="testimonial-viewport">
+          <div id="testimonial-track" class="testimonial-track">
+            <article class="testimonial-slide">
+              <div class="testimonial-card">
+                <div class="testimonial-header">
+                  <img class="avatar" src="https://images.pexels.com/photos/8727453/pexels-photo-8727453.jpeg?auto=compress&cs=tinysrgb&w=400" alt="Retrato genérico de una mujer sonriente.">
+                  <div>
+                    <p class="name">Regina Suarez.</p>
+                    <p class="occasion">Regalo para mamá</p>
+                  </div>
+                </div>
+                <p class="quote">"Ame la calidad y mi mama quedo impactada por su regalo. Recomendando."</p>
+                <div class="stars" aria-label="Cinco estrellas">★★★★★</div>
+              </div>
+            </article>
+            <article class="testimonial-slide">
+              <div class="testimonial-card">
+                <div class="testimonial-header">
+                  <img class="avatar" src="https://images.pexels.com/photos/12446392/pexels-photo-12446392.jpeg?auto=compress&cs=tinysrgb&w=400" alt="Retrato genérico de un hombre sonriente.">
+                  <div>
+                    <p class="name">Daniela Ferrara.</p>
+                    <p class="occasion">Playera</p>
+                  </div>
+                </div>
+                <p class="quote">"Pude conseguir la playera que tanto queria; La calidad es increible"</p>
+                <div class="stars" aria-label="Cinco estrellas">★★★★★</div>
+              </div>
+            </article>
+            <article class="testimonial-slide">
+              <div class="testimonial-card">
+                <div class="testimonial-header">
+                  <img class="avatar" src="https://images.pexels.com/photos/962337/pexels-photo-962337.png?auto=compress&cs=tinysrgb&w=400" alt="Retrato genérico de una mujer joven sonriente.">
+                  <div>
+                    <p class="name">Fer Salgado.</p>
+                    <p class="occasion">Detalle sorpresa</p>
+                  </div>
+                </div>
+                <p class="quote">"Le encanto a mi novio, llego a tiempo y tiene muy buena calidad, pague el extra para las cajas y los recibos y son iguales a los originales."</p>
+                <div class="stars" aria-label="Cinco estrellas">★★★★★</div>
+              </div>
+            </article>
+          </div>
+        </div>
+        <div class="carousel-controls">
+          <button id="testimonial-prev" type="button" aria-label="Testimonio anterior"><i data-lucide="arrow-left"></i></button>
+          <div id="testimonial-dots" class="dots" aria-label="Seleccionar testimonio">
+            <button class="active" aria-label="Ver testimonio 1" aria-current="true"></button>
+            <button aria-label="Ver testimonio 2" aria-current="false"></button>
+            <button aria-label="Ver testimonio 3" aria-current="false"></button>
+          </div>
+          <button id="testimonial-next" type="button" aria-label="Siguiente testimonio"><i data-lucide="arrow-right"></i></button>
+        </div>
+      </div>
+    </section>
+
+
+ <!-- ================= CONTACTO ================= -->
+    <section id="contacto" class="contact">
+      <div class="container contact-panel reveal">
+        <div class="contact-text">
+          <p class="eyebrow">Calidad espejo-excelente calidad</p>
+          <h2>Tu proxima prenda te esta esperando</h2>
+          <p class="lead">Pregunta por cualquier prenda o accesrio
+             que desees y Yupoo lo consigue, calidad, confianza y el mejor precio del mercado. </p>
+          <button type="button" class="btn primary" onclick="openWhatsApp('Hola, quiero platicar sobre un detalle personalizado.')">Escribir por WhatsApp</button>
+        </div>
+        <aside class="contact-info" aria-label="Datos de contacto">
+          <ul>
+            <li><i data-lucide="instagram"></i> <a href="https://instagram.com/" target="_blank" rel="noopener noreferrer">@YUPOO.OFICIAL</a></li>
+            <li><i data-lucide="facebook"></i> <a href="https://facebook.com/" target="_blank" rel="noopener noreferrer">@Yupoo_oficial</a></li>
+            <li><i data-lucide="mail"></i> <a href="mailto:hello@yupoo.mx">hello@yupoo.com.mx</a></li>
+            <li><i data-lucide="clock-3"></i> Entregas a todo el mundo</li>
+          </ul>
+        </aside>
+      </div>
+    </section>
+
+</main>
+ <!-- ================= FOOTER ================= -->
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <p class="brand">Yupoo_oficia4l</p>
+      <p class="love"> Todos los Derechos Resevados a Yupoo</p>
+      <nav class="footer-links">
+        <a href="#productos">Productos</a>
+        <a href="#contacto">Contacto</a>
+      </nav>
     </div>
   </footer>
 
- <script src="JS/script.js"></script> 
+  <!-- Botón flotante de WhatsApp -->
+  <button id="whatsapp-float" type="button" class="whatsapp-float" aria-label="Escribir por WhatsApp" onclick="openWhatsApp('Hola, quiero conocer los detalles personalizados de Dulce Detalle.')">
+    <i data-lucide="message-circle"></i>
+  </button>
+
+  <!-- ================= MODALES DE PRODUCTO ================= -->
+  <div id="modal-caja" class="modal" role="dialog" aria-modal="true" aria-labelledby="modal-caja-title">
+    <div class="modal-panel">
+      <div class="modal-image">
+        <img src="img/imagen1.jpg" alt="Caja de regalo rosa con chocolates y listón.">
+        <button type="button" class="modal-close" aria-label="Cerrar producto" onclick="closeModal('modal-caja')"><i data-lucide="x"></i></button>
+      </div>
+
+
+      <div class="modal-body">
+        <h2 id="modal-caja-title">Louis Vuitton Trainer Negro</h2>
+        <p class="price">$2,200 MXN</p>
+        <p>Los clásicos tenis LV Trainer de la colección de hombre de Louis Vuitton se reinterpretan 
+                por primera vez para mujer. Este modelo creado por Virgil Abloh está confeccionado en suave piel 
+              de becerro y tejido denim Monograma y se inspira en el calzado vintage de basquetbol.</p>
+        <h3>Haz tu pedido:</h3>
+
+        <ul>
+          <li>Pago con tarjeta</li>
+          <li>Selección el color </li>
+          <li>Full set</li>
+        </ul>
+        <button type="button" class="btn primary" onclick="openWhatsApp('Hola, quiero pedir los Louis Vuitton Trainer Negro.')">Pedir por WhatsApp</button>
+      </div>
+    </div>
+  </div>
+  <div id="modal-vela" class="modal" role="dialog" aria-modal="true" aria-labelledby="modal-vela-title">
+    <div class="modal-panel">
+      <div class="modal-image">
+        <img src="img/imagen1.jpg" alt="Louis Vuitton Trainer Negro.">
+        <button type="button" class="modal-close" aria-label="Cerrar producto" onclick="closeModal('modal-vela')"><i data-lucide="x"></i></button>
+      </div>
+      <div class="modal-body">
+        <h2 id="modal-vela-title">Burberry shirt classic monogram</h2>
+        <p class="price">$1,300 MXN</p>
+        <p>Una camisa de manga larga confeccionada en algodón ligero, tejida con 
+                el característico estampado Burberry Check en tono beige arena.El diseño presenta un corte 
+                relajado y lleva discretamente bordado nuestro logotipo en letra cursiva.</p>
+        <h3>Haz tu pedido:</h3>
+        <ul>
+          <li>Pago con tarjeta</li>
+          <li>Seleccione el color </li>
+          <li>Full set </li>
+        </ul>
+        <button type="button" class="btn primary" onclick="openWhatsApp('Hola, quiero pedir la Burberry shirt classic monogram')">Pedir por WhatsApp</button>
+      </div>
+    </div>
+  </div>
+  <div id="modal-taza" class="modal" role="dialog" aria-modal="true" aria-labelledby="modal-taza-title">
+    <div class="modal-panel">
+      <div class="modal-image">
+        <img src="img/imagen2.jpg" alt="Burberry shirt classic monogram.">
+        <button type="button" class="modal-close" aria-label="Cerrar producto" onclick="closeModal('modal-taza')"><i data-lucide="x"></i></button>
+      </div>
+      <div class="modal-body">
+        <h2 id="modal-taza-title">Bracaletes Cartier unisex plata y oro</h2>
+        <p class="price">$760 MXN</p>
+        <p>El origen de la colección LOVE es la emblemática pulsera creada en Nueva York en 1969. 
+                Reconocemos esta pulsera ovalada, expresión de la visión del diseño de Cartier, por su motivo 
+                radical e innovador, que se atreve a mostrar los tornillos. Más allá de su diseño, LOVE es 
+                una colección manifiesto que sella los sentimientos.</p>
+        <h3>Haz tu pedido:</h3>
+        <ul>
+          <li>Pago con tarjeta</li>
+          <li>Seleccione el color</li>
+          <li>Full set</li>
+        </ul>
+        <button type="button" class="btn primary" onclick="openWhatsApp('Hola, quiero pedir un Bracaletes Cartier unisex plata y oro')">Pedir por WhatsApp</button>
+      </div>
+    </div>
+  </div>
+  <div id="modal-jardin" class="modal" role="dialog" aria-modal="true" aria-labelledby="modal-jardin-title">
+    <div class="modal-panel">
+      <div class="modal-image">
+        <img src="img/imagen3.jpg" alt="Bracaletes Cartier unisex plata y oro">
+        <button type="button" class="modal-close" aria-label="Cerrar producto" onclick="closeModal('modal-jardin')"><i data-lucide="x"></i></button>
+      </div>
+      <div class="modal-body">
+        <h2 id="modal-jardin-title">Mini Jardín</h2>
+        <p class="price">$279 MXN</p>
+        <p>Un detalle vivo que alegra cualquier escritorio, rincón favorito o celebración especial.</p>
+        <h3>Personalízalo con:</h3>
+        <ul>
+          <li>Maceta decorada</li>
+          <li>Tarjeta especial</li>
+          <li>Selección de planta</li>
+        </ul>
+        <button type="button" class="btn primary" onclick="openWhatsApp('Hola, quiero pedir un Mini Jardín. ¿Qué opciones de maceta tienen?')">Pedir por WhatsApp</button>
+      </div>
+    </div>
+  </div>
+
+
+   
+<script src="js/script.js"></script>
 </body>
 </html>
